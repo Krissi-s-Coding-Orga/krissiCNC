@@ -1439,7 +1439,7 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR false
+#define INVERT_X_DIR true
 #define INVERT_Y_DIR true
 #define INVERT_Z_DIR true
 //#define INVERT_I_DIR false
@@ -1480,9 +1480,9 @@
 
 // Direction of endstops when homing; 1=MAX, -1=MIN
 // :[-1,1]
-#define X_HOME_DIR -1
+#define X_HOME_DIR 1
 #define Y_HOME_DIR -1
-#define Z_HOME_DIR -1
+//#define Z_HOME_DIR -1
 //#define I_HOME_DIR -1
 //#define J_HOME_DIR -1
 //#define K_HOME_DIR -1
@@ -1493,7 +1493,7 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 200
+#define X_BED_SIZE 120
 #define Y_BED_SIZE 200
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
@@ -1529,29 +1529,29 @@
 //disable min and max UNSAFE!!! for testing!!!
 #define MIN_SOFTWARE_ENDSTOPS
 #if ENABLED(MIN_SOFTWARE_ENDSTOPS)
-  #define MIN_SOFTWARE_ENDSTOP_X
-  #define MIN_SOFTWARE_ENDSTOP_Y
+//  #define MIN_SOFTWARE_ENDSTOP_X
+//  #define MIN_SOFTWARE_ENDSTOP_Y
   #define MIN_SOFTWARE_ENDSTOP_Z
-  #define MIN_SOFTWARE_ENDSTOP_I
-  #define MIN_SOFTWARE_ENDSTOP_J
-  #define MIN_SOFTWARE_ENDSTOP_K
-  #define MIN_SOFTWARE_ENDSTOP_U
-  #define MIN_SOFTWARE_ENDSTOP_V
-  #define MIN_SOFTWARE_ENDSTOP_W
+//  #define MIN_SOFTWARE_ENDSTOP_I
+//  #define MIN_SOFTWARE_ENDSTOP_J
+//  #define MIN_SOFTWARE_ENDSTOP_K
+//  #define MIN_SOFTWARE_ENDSTOP_U
+//  #define MIN_SOFTWARE_ENDSTOP_V
+//  #define MIN_SOFTWARE_ENDSTOP_W
 #endif
 
 // Max software endstops constrain movement within maximum coordinate bounds
-//#define MAX_SOFTWARE_ENDSTOPS
+#define MAX_SOFTWARE_ENDSTOPS
 #if ENABLED(MAX_SOFTWARE_ENDSTOPS)
   #define MAX_SOFTWARE_ENDSTOP_X
   #define MAX_SOFTWARE_ENDSTOP_Y
-  #define MAX_SOFTWARE_ENDSTOP_Z
-  #define MAX_SOFTWARE_ENDSTOP_I
-  #define MAX_SOFTWARE_ENDSTOP_J
-  #define MAX_SOFTWARE_ENDSTOP_K
-  #define MAX_SOFTWARE_ENDSTOP_U
-  #define MAX_SOFTWARE_ENDSTOP_V
-  #define MAX_SOFTWARE_ENDSTOP_W
+//  #define MAX_SOFTWARE_ENDSTOP_Z
+//  #define MAX_SOFTWARE_ENDSTOP_I
+//  #define MAX_SOFTWARE_ENDSTOP_J
+//  #define MAX_SOFTWARE_ENDSTOP_K
+//  #define MAX_SOFTWARE_ENDSTOP_U
+//  #define MAX_SOFTWARE_ENDSTOP_V
+//  #define MAX_SOFTWARE_ENDSTOP_W
 #endif
 
 #if EITHER(MIN_SOFTWARE_ENDSTOPS, MAX_SOFTWARE_ENDSTOPS)
@@ -1860,8 +1860,8 @@
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
-#define MANUAL_X_HOME_POS 0
-#define MANUAL_Y_HOME_POS 0
+//#define MANUAL_X_HOME_POS 0
+//#define MANUAL_Y_HOME_POS 0
 #define MANUAL_Z_HOME_POS 0
 //#define MANUAL_I_HOME_POS 0
 //#define MANUAL_J_HOME_POS 0
