@@ -881,7 +881,7 @@
 // extra connectors. Leave undefined any used for non-endstop and non-probe purposes.
 
 //#define USE_XMIN_PLUG
-//#define USE_YMIN_PLUG
+#define USE_YMIN_PLUG
 #define USE_ZMIN_PLUG
 //#define USE_IMIN_PLUG
 //#define USE_JMIN_PLUG
@@ -890,7 +890,7 @@
 //#define USE_VMIN_PLUG
 //#define USE_WMIN_PLUG
 #define USE_XMAX_PLUG
-#define USE_YMAX_PLUG
+//#define USE_YMAX_PLUG
 //#define USE_ZMAX_PLUG
 //#define USE_IMAX_PLUG
 //#define USE_JMAX_PLUG
@@ -1530,7 +1530,7 @@
 #define MIN_SOFTWARE_ENDSTOPS
 #if ENABLED(MIN_SOFTWARE_ENDSTOPS)
 //  #define MIN_SOFTWARE_ENDSTOP_X
-//  #define MIN_SOFTWARE_ENDSTOP_Y
+  #define MIN_SOFTWARE_ENDSTOP_Y
   #define MIN_SOFTWARE_ENDSTOP_Z
 //  #define MIN_SOFTWARE_ENDSTOP_I
 //  #define MIN_SOFTWARE_ENDSTOP_J
@@ -1544,7 +1544,7 @@
 #define MAX_SOFTWARE_ENDSTOPS
 #if ENABLED(MAX_SOFTWARE_ENDSTOPS)
   #define MAX_SOFTWARE_ENDSTOP_X
-  #define MAX_SOFTWARE_ENDSTOP_Y
+//  #define MAX_SOFTWARE_ENDSTOP_Y
 //  #define MAX_SOFTWARE_ENDSTOP_Z
 //  #define MAX_SOFTWARE_ENDSTOP_I
 //  #define MAX_SOFTWARE_ENDSTOP_J
